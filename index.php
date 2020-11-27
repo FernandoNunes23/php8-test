@@ -6,12 +6,14 @@ require_once("TestClasses/NamedArgumentsTest.php");
 require_once("TestClasses/AttributesTest.php");
 require_once("TestClasses/ExampleAttribute.php");
 require_once("TestClasses/MatchExpressionTest.php");
+require_once("TestClasses/ConstructorPropertyPromotionTest.php");
 
 $unionTypeTest = new UnionTypeTest();
 $nullSafeTypeTest = new NullSafeOperatorTest();
 $namedArgumentsTest = new NamedArgumentsTest();
 $attributeTest = new AttributesTest();
 $matchExpressionTest = new MatchExpressionTest();
+$constructorPropertyPromotionTest = new ConstructorPropertyPromotionTest("Fernando", 28, "Active");
 
 /**
  * TESTING UNION TYPES
@@ -69,4 +71,12 @@ echo "\$matchExpressionTest->useMatchExpression(1) <br>";
 echo $matchExpressionTest->useMatchExpression(0) . "<br>";
 echo "\$matchExpressionTest->useMatchExpression(4) <br>";
 echo $matchExpressionTest->useMatchExpression(4);
+echo "<hr><br>";
+
+/**
+ * CONSTRUCT PROPERTY PROMOTION TEST
+ */
+echo "Testando constructor property promotion <br><br>";
+echo "\$constructorPropertyPromotionTest->debugAttr() <br>";
+echo $constructorPropertyPromotionTest->debugAttr();
 echo "<hr><br>";
